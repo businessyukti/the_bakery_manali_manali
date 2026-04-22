@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Bakery, Manali - Bakery and Cake Shop in Manali</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="bg-white/80 backdrop-blur-md shadow-sm p-4 flex justify-between items-center sticky top-0 z-50">
+    
+    <div class="font-bold text-lg tracking-tight">
+        The Bakery, Manali
+    </div>
+
+    <div class="space-x-6 text-sm font-medium">
+        <a href="about.html">About</a>
+        <a href="services.html" class="hover:text-blue-600 transition">Services</a>
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="reviews.html" class="hover:text-blue-600 transition">Reviews</a>
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+    </div>
+
+    <div class="bg-yellow-400 text-black text-center py-2 text-sm font-semibold">
+    📞 Call Now: 7018269959.0 | Fast Service in Manali
+</div>
+
+</nav>
+
+
+<section class="relative h-[500px]">
+
+    
+
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <div class="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 text-white max-w-4xl">
+
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+            The Bakery, Manali
+        </h1>
+
+        <p class="mt-3 text-xl opacity-90">
+            Trusted Bakery and Cake Shop in Manali
+        </p>
+
+        <p class="mt-2 text-sm opacity-80">
+            ⭐ 4.1 (274+ reviews)
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-4">
+
+            <a href="tel:7018269959.0" 
+               class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold shadow-lg hover:scale-105 transition">
+               📞 Call Now
+            </a>
+
+            <a href="https://wa.me/7018269959.0?text=Hi%20I%20need%20Bakery and Cake Shop%20service%20in%20Manali" 
+               class="bg-white text-black px-6 py-3 rounded-lg font-bold shadow-lg hover:scale-105 transition">
+               💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTENT -->
+<div class="p-6 max-w-4xl mx-auto">
+    
+
+<h2 class="text-3xl font-bold mb-6">About The Bakery, Manali</h2>
+
+<div class="bg-white p-6 rounded-xl shadow">
+
+    <p class="text-gray-600 leading-relaxed">
+        The Bakery, Manali is a trusted Bakery and Cake Shop service provider in Manali.
+        We have been serving local customers with reliable and professional services.
+    </p>
+
+    <p class="mt-4 text-gray-600">
+        ✔ Experienced professionals <br>
+        ✔ Quick response time <br>
+        ✔ Affordable pricing <br>
+        ✔ Trusted by local customers
+    </p>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="bg-white border-t p-4 text-center mt-10 text-sm text-gray-600">
+    <p class="font-medium">The Bakery, Manali | Manali</p>
+    <p class="mt-1">📞 7018269959.0</p>
+</footer>
+
+
+<!-- FLOATING CTA -->
+<div class="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
+
+    <a href="tel:7018269959.0" 
+       class="bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg hover:scale-110 transition">
+        📞
+    </a>
+
+    <a href="https://wa.me/7018269959.0?text=Hi%20I%20need%20Bakery and Cake Shop%20service%20in%20Manali" 
+       class="bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:scale-110 transition">
+        💬
+    </a>
+
+</div>
+
+
+<!-- CAROUSEL SCRIPT -->
+<script>
+let currentSlide = 0;
+const slides = document.getElementsByClassName("carousel-item");
+const dots = document.getElementsByClassName("dot");
+
+function showSlide(index) {
+    if (slides.length === 0) return;
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = "0";
+        if (dots[i]) dots[i].classList.remove("bg-gray-800");
+    }
+
+    slides[index].style.opacity = "1";
+    if (dots[index]) dots[index].classList.add("bg-gray-800");
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Dot click
+for (let i = 0; i < dots.length; i++) {
+    dots[i].addEventListener("click", function() {
+        currentSlide = i;
+        showSlide(currentSlide);
+    });
+}
+
+window.onload = function() {
+    if (slides.length > 0) {
+        showSlide(currentSlide);
+    }
+
+    if (slides.length > 1) {
+        setInterval(nextSlide, 3000);
+    }
+};
+</script>
+
+</body>
+</html>
